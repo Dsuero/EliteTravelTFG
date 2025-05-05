@@ -1,0 +1,401 @@
+html {
+  overflow-x: hidden !important;
+}
+*/ .section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navegatorDiv {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(3, 27, 70) !important;
+  height: 113px;
+  display: flex; /* <-- AÑADIDO */
+  align-items: center;
+  justify-content: space-between; /* o center o space-evenly, depende del diseño */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0 5%;
+}
+
+.nav {
+  display: flex;
+  gap: 30px; /* espacio entre elementos */
+  list-style: none;
+  font-family: "SfProBold", "Helvetica Neue", Helvetica, Arial;
+  font-size: medium !important;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.mainDiv {
+  position: relative;
+  overflow: hidden;
+  height: 50vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.ytVideoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none; /* para que el usuario no pueda hacer clic en el iframe */
+}
+
+.ytVideoBackground iframe {
+  width: 100vw;
+  height: 56.25vw; /* proporción 16:9 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.mainDiv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Capa oscura encima del video */
+  z-index: -1;
+}
+
+.mainContent {
+  position: relative;
+  z-index: 1;
+}
+
+.topRed {
+  display: flex;
+  width: 155px;
+  height: 55px;
+  background-color: red;
+  justify-content: center; /* Alinea horizontalmente los elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+.bottomBlue {
+  display: flex;
+  width: 155px;
+  margin-top: 3px;
+  height: 55px;
+  background-color: rgb(3, 27, 70);
+  justify-content: center; /* Alinea horizontalmente l os elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  /* sombra suave negra */
+}
+.Elite {
+  color: white;
+  position: relative;
+  top: 12px;
+  font-size: 29px;
+  font-family: "SfProBold", "Helvetica Neue", Helvetica, Arial;
+  font-style: italic;
+}
+.Travel {
+  color: white;
+  position: relative;
+  bottom: 14px;
+  font-size: 25px;
+  font-family: "SfProBold", "Helvetica Neue", Helvetica, Arial;
+  font-style: italic;
+}
+
+.socials {
+  height: 50px;
+  width: 50px;
+}
+
+.mail {
+  height: 65px;
+  width: 50px;
+}
+
+.aside {
+  height: 120px;
+  width: 40px;
+  background-color: rgb(3, 27, 70);
+  display: flex;
+  gap: 6px;
+  left: 10px;
+  top: 400px;
+  position: fixed;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.socialIcon {
+  height: 30px;
+  width: 30px;
+  padding-top: 6px;
+}
+
+.footerTop {
+  width: 100%;
+  height: 300px;
+  background-color: red;
+}
+
+.footerBottom {
+  /*background-color: rgb(240, 248, 255, 0.5);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;*/
+  width: 100%;
+  height: 300px;
+  background-color: rgb(3, 27, 70);
+  margin-top: 10px;
+}
+.EliteFooter {
+  color: white;
+  position: relative;
+  top: 255px;
+  left: 200px;
+  font-size: 29px;
+  font-family: "SfProBold", "Helvetica Neue", Helvetica, Arial;
+}
+.TravelFooter {
+  color: white;
+  position: relative;
+  top: 10px;
+  left: 200px;
+  font-size: 29px;
+  font-family: "SfProBold", "Helvetica Neue", Helvetica, Arial;
+}
+
+.container {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.footerHeading {
+  font-family: "SfProCursive", "Helvetica Neue", Helvetica, Arial;
+}
+
+.footerParagraph {
+  margin-bottom: 50px;
+  font-family: "SfProCursive", "Helvetica Neue", Helvetica, Arial;
+}
+
+.footerInfoDiv {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.businessHours {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: lightskyblue;
+  font-family: "SfProSemiBoldItalicRegular", "Helvetica Neue", Helvetica;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.eliteLocation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: lightskyblue;
+  font-family: "SfProSemiBoldItalicRegular", "Helvetica Neue", Helvetica;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.bookNow {
+  color: white;
+  padding: 10px 20px;
+  font-size: larger;
+  text-transform: uppercase;
+}
+
+.footerCreditsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-right: 80px;
+}
+
+.contactUs {
+  padding-left: 80px;
+  font-family: "SfProBold", "Helvetica Neue", Helvetica, Arial;
+  color: lightskyblue;
+}
+
+.mainTitle {
+  color: white !important;
+  font-size: 100px !important;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "SfProSemiBoldItalicRegular", "Helvetica Neue", Helvetica;
+  font-weight: bolder;
+  z-index: 100;
+}
+
+/* ==================================================================================== */
+/*-----------------------------------------GALERIA------------------------------------- */
+/* ==================================================================================== */
+
+.gallery {
+  display: flex;
+  width: 100%;
+  height: 370px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.gallery-item {
+  position: relative;
+  flex: 1;
+  transition: 0.7s ease;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+/* ✅ Expansión al pasar el mouse */
+.gallery-item:hover {
+  flex: 2;
+}
+
+.gallery-item:hover img {
+  transform: scale(1);
+}
+
+/* ✅ Estilos del texto */
+.overlay {
+  position: absolute;
+  color: black;
+  left: 50%;
+  bottom: 0px;
+  width: 100%;
+  transform: translateX(-50%);
+  background-color: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: rgb(3, 27, 70, 0.9);
+  font-family: "SfProBold", "Helvetica Neue", Helvetica, Arial;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* ==================================================================================== */
+/*-----------------------------------------FIN GALERIA----------------------------------*/
+/* ==================================================================================== */
+
+.offersSeparator {
+  width: 100%;
+  height: 4vw;
+  background-color: rgb(3, 27, 70);
+  font-size: 1.3vw;
+  color: white;
+  font-family: "SfProBold", "Helvetica Neue", Helvetica, Arial;
+}
+#offersTitle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+/* ==================================================================================== */
+/*-----------------------------------------FONTS--------------------------------------- */
+/* ==================================================================================== */
+
+@font-face {
+  font-family: "SfProRegular";
+  src: url("fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SfProBold";
+  src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SfProCursive";
+  src: url("fonts/SFPRODISPLAYTHINITALIC.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SfProSemiBoldItalicRegular";
+  src: url("fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "QuotesCursiveFont";
+  src: url("fonts/URW\ Chancery\ L\ Medium\ Italic\ U.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==================================================================================== */
+/* ---------------------------------ESTILOS ABOUT US----------------------------------- */
+/* ==================================================================================== */
